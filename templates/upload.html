@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+  
+    <title>Twitter file upload</title>
+</head>
+<body bgcolor="grey">
+  <style>
+    body {
+    background-image: url("{{ url_for('static', filename='shutterstock_216247747twtr-5bfc324346e0fb00517d2976.jpg') }}");
+}
+
+    </style>
+  <br><br><br><br><br><br>
+    <center>
+    <form method="post" action="{{url_for('upload')}}" enctype="multipart/form-data" onsubmit="return validateForm()">
+      <label for="file">Upload a file:</label>
+        <input type="file" name="file" id="file">
+        <br><br>
+        <center><input type="submit", value="Create the model" id="s"></center>
+        <br><br>
+    </form>
+    <script>
+      function validateForm() {
+          var fileInput = document.getElementById('file');
+          var fileName = fileInput.value;
+          if (fileName == '') {
+              alert('Please select a file to upload');
+              return false;
+          }
+      }
+  </script>
+    
+    {% if result %}
+    <script>
+        window.onload = function() {
+          if (window.confirm("Model is ready! Press OK to Test")) {
+            window.location.href = "{{ url_for('home') }}"
+          }
+        };
+      </script>
+      
+    {% endif %}
+    
+
+</center>
+</body>
+</html>

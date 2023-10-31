@@ -1,0 +1,27 @@
+h1{
+    font-family: serif;
+    font-size: 50px;
+    color: whitesmoke;
+}
+
+button{
+    border-radius: 25px;
+    border: none;
+    padding: 10px ;
+    background-color: transparent;
+    border: 3px solid whitesmoke;
+    color: white;
+    font-size: medium;
+    
+}
+button:hover{
+    background-color: black;
+}
+.form1{
+    margin-left: 33%;
+    float: left;
+   
+}
+.form2{
+    margin-right: 400px;
+}

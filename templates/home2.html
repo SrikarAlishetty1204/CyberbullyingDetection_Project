@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+
+    <title>Testing wikipedia data</title>
+</head>
+<body>
+    <style>
+        body {
+        background-image: url("{{ url_for('static', filename='download (1).png') }}");
+    }
+    
+        </style>
+    <div class="container text-center">
+        <center><h1 class="display-4">Test for Wikipedia Cyberbullying</h1></center>
+      </div>
+    <center>
+
+        <hr>
+        <br><br>
+    <form method="post" action="{{url_for('predict2')}}" enctype="multipart/form-data" onsubmit="return validateForm()">
+       
+        Enter Comment: <input type="text", name='a' id="t">
+        <input type="submit", value="predict" id="s">
+    </form>
+    <script>
+    function validateForm() {
+        var text = document.getElementById('t');
+        var textName = text.value;
+        if (textName == '') {
+            alert('Please Enter tweet');
+            return false;
+        }
+    }
+</script>
+    {% if prediction_text %}
+    
+    <script>
+       alert("{{prediction_text}}")
+      </script>
+    {% endif %}
+    
+</center>
+</html>

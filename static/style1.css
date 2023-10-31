@@ -1,0 +1,31 @@
+
+body {
+    
+    min-height: 100vh;
+    background-size:100vw 100vh;
+    background-repeat: no-repeat;
+
+}
+h1{
+    font-family: serif;
+    font-size: 35px;
+    color: whitesmoke;
+}
+form{
+    font-size: x-large;
+    color: aliceblue;
+}
+body{
+    font-size: larger;
+    color: whitesmoke;
+}
+#s{
+    color: whitesmoke;
+    background-color: blue;
+    padding: 7px;
+    border-radius: 8px;
+    border: none;
+}
+input{
+    padding: 7px;
+}
